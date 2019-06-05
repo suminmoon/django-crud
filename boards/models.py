@@ -10,3 +10,7 @@ class Board(models.Model):
     content = models.TextField() # text 가 길 때 사용
     created_at = models.DateTimeField(auto_now_add=True)  # auto_new_add : 객체 최초 1회 생성 시점의 시간을 담겠다.
     updated_at = models.DateTimeField(auto_now=True)  # auto_new : 지금 작업을 할 때 시점
+
+
+    def __str__(self):
+        return f'{self.id}번째 글 - {self.title} : {self.content}'

@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # local apps
-    'boards.apps.BoardsConfig'
+    'boards.apps.BoardsConfig',
     
     # django apps
     'django.contrib.admin',
@@ -118,7 +118,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False  # True : templates 나 form 에서만 위에서 정의한 타임존이 적용/ False 는 DB 등 모든 작업에 적용이 됨
 
 
 # Static files (CSS, JavaScript, Images)
